@@ -1,0 +1,22 @@
+-- Determine the relations for Project 3 assignment
+
+
+top_artists
+-
+nameP  VARCHAR(50) 
+colloq_name   VARCHAR(50)
+last_name       VARCHAR(50)
+lifespanP       VARCHAR(20)
+separator       DECIMAL
+bio    VARCHAR(750)
+
+cmoa
+-
+last_name        VARCHAR(50)  FK >- top_artists.last_name 
+cited_name       VARCHAR(100)
+classification   VARCHAR(50)
+title            VARCHAR(255)
+full_name        VARCHAR(100)
+creation_date    VARCHAR(30)
+nationality      VARCHAR(50)
+index            DECIMAL
