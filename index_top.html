@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>CSV</title>
+  <link rel="stylesheet" href="csv-conversion/style.css">
+  <!-- next line is original code and works -- 
+
+      
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+</head>
+
+<body>
+  <!-- <input type="file" id="file"> -->
+  <!-- <table id ='table'></table> -->
+  <!-- <script src="app.js"></script> -->
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>painters_name</th>
+      <th>colloquial_name</th>
+      <th>lifespan</th>
+      <th>bio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Pablo Picasso</td>
+      <td>Picasso</td>
+      <td>1881-1973</td>
+      <td>Love him or hate him, Pablo Picasso changed it all. He is to Art History a giant earthquake with eternal consequences. Nobody tried harder than Picasso to create the avant-garde. And no one tried harder to destroy it. He looked back at the masters and created a personal style that was imitated by artists around the globe. During his later years, his works are often somewhat dull and unexciting, but his unmatched legacy had already been set. For the better or for the worse.</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Giotto Di Bondone</td>
+      <td>Giotto</td>
+      <td>c.1267-1337</td>
+      <td>The greatest renovator of early European painting, Giotto was the first to deviate from the rigid course of Byzantine painting. With his unusually imaginative talent, his original iconographies, and his remarkable love for the nature and the human expression, Giotto revolutionized Western Art to the point that many critics consider him, not without reason, the first genius of European painting, praised by his contemporaries Dante, Petrarca and Boccaccio.</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Leonardo Da Vinci</td>
+      <td>Leonardo</td>
+      <td>1452-1519</td>
+      <td>There is no artist more legendary than Leonardo da Vinci. In the entire History of Art, no other name has generated more debates, more discussions and more hours of study than the genius born in Vinci in 1452, who will be always known as the author of the most famous painting of all times, the Gioconda or Mona Lisa.</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Paul Cézanne</td>
+      <td>Cézanne</td>
+      <td>1839-1906</td>
+      <td>“Cézanne is the father of us all”. This lapidary phrase has been attributed to both Picasso and Matisse, and it certainly matters little who actually said it, because it is true in any case. Riding the wave of fresh air that Impressionism represented, Cézanne left the entire Impressionist group behind to develop a style of painting hitherto unseen, which opened the door wide for the arrival of Cubism and the rest of the 20th century avant-garde.</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Rembrandt Van Rijn</td>
+      <td>Rembrandt</td>
+      <td>1606-1669</td>
+      <td>The fascinating, magnetic interplay of light and shadow in his works seems a reflection of his life, which went from fame to oblivion while his technique only improved. His self-portraits, by far the most fascinating in the history of painting, tell us of a sincere and honest painter, a master capable of penetrating the mind of the greatest stranger: oneself.</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Diego Velázquez</td>
+      <td>Velázquez</td>
+      <td>1599-1660</td>
+      <td>Along with Rembrandt, Velázquez represents the zenith of Baroque painting. But unlike the Dutchman, the Sevillian artist spent most of his life in the comfortable but rigid court society. Despite this, Velázquez was a renovator, a “painter of atmospheres” almost two centuries before Turner or the Impressionists, and he captured this in his colossal royal paintings (“Meninas“, “The Forge of Vulcan“) as well as in the bold and unforgettable sketches of the Villa Medici.</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Wassily Kandinsky</td>
+      <td>Kandinsky</td>
+      <td>1866-1944</td>
+      <td>Few artists -perhaps none- played as decisive a role as Wassily Kandinsky (1866-1944) in the development of abstract art, the greatest revolution in Western art since the Renaissance. Over a period of three years, at the dawn of the First World War, Kandinsky culminated a personal artistic evolution that had begun 20 years earlier when, impressed by Monet’s painting, he began to experiment with the power of pure paint and the capacity of colour to express feelings.</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Claude Monet</td>
+      <td>Monet</td>
+      <td>1840-1926</td>
+      <td>The importance of Monet in the history of art is sometimes “underrated”, as Art lovers tend to see only the overwhelming beauty that emanates from his canvases, ignoring the complex technique and composition of the work (a “defect” somehow caused by Monet himself, when he declared that “I do not understand why everyone discusses my art and pretends to understand, as if it were necessary to understand, when it is simply necessary to love”). However, Monet’s experiments, including his studies on the changes in the same object caused by daylight at different times of the day; and the almost abstract quality of his “water lilies”, are clearly a prologue to the art of the twentieth century.</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Michelangelo Merisi Da Caravaggio</td>
+      <td>Caravaggio</td>
+      <td>1571-1610</td>
+      <td>The tough and violent Caravaggio is considered the father of Baroque painting, with his spectacular use of lights and shadows. Caravaggio’s chiaroscuro became so famous that many painters started to copy his paintings, creating the ‘Caravaggisti’ style.</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Jan Van Eyck</td>
+      <td>Van Eyck</td>
+      <td>1390-1441</td>
+      <td>Van Eyck is the colossal pillar on which all Flemish painting of later centuries rests, a genius of precision, perspective and meticulousness, far above any other artist of his time, Flemish or Italian.</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Joseph-Mallord William Turner</td>
+      <td>Turner</td>
+      <td>1775-1851</td>
+      <td>Turner is the best landscape painter of Western painting. Albeit an academic painter during his first years, Turner slowly but unstoppably evolved towards a free, atmospheric style, sometimes even outlining the abstraction, which was misunderstood and rejected by the same critics who then admired him for decades.</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Albrecht Dürer</td>
+      <td>Dürer</td>
+      <td>1471-1528</td>
+      <td>The real Leonardo da Vinci of Northern European Rennaisance was Albrecht Dürer, a restless and innovative genious, master of drawing and color. He was one of the first artists to represent nature without artifice, either in his painted landscapes or in his drawings of plants and animals.</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Michelangelo Buonarroti</td>
+      <td>Michelangelo</td>
+      <td>1475-1564</td>
+      <td>Some readers will be quite surprised to see a man who is arguably the greatest artistic genius of all time out of the “top ten” of this list, but the fact is that even Michelangelo defined himself as “sculptor”, and even his painted masterpiece (the frescoes in the Sistine Chapel) are often defined as ‘painted sculptures’. Nevertheless, that unforgettable masterpiece is enough to guarantee him a place of honor in the history of painting.</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Francisco De Goya</td>
+      <td>Goya</td>
+      <td>1746-1828</td>
+      <td>Goya is an enigma. In the whole History of Art few figures are as complex as the artist born in Fuendetodos, Spain. Enterprising and indefinable, a painter with no rival in all his life, Goya was the painter of the Court and the painter of the people. He was a religious painter and a mystical painter. He was the author of the beauty and eroticism of the ‘Maja desnuda’ and the creator of the explicit horror of ‘The Third of May, 1808’. He was an oil painter, a fresco painter, a sketcher and an engraver. And he never stopped his metamorphosis.</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Vincent Van Gogh</td>
+      <td>Van Gogh</td>
+      <td>1853-1890</td>
+      <td>Few names in the history of painting are now as famous as Van Gogh, despite the complete neglect he suffered in life. His works, strong and personal, are one of the greatest influences in the twentieth century painting, especially for the German Expressionism.</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Édouard Manet</td>
+      <td>Manet</td>
+      <td>1832-1883</td>
+      <td>Manet was the origin of Impressionism, a revolutionary in a time of great artistic revolutions. His (at the time) quite polemical “Olympia” or “Déjeuner sur l’Herbe” opened the way for the great figures of the Impressionism.</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Henri Matisse</td>
+      <td>Matisse</td>
+      <td>1869-1954</td>
+      <td>Some art critics tend to regard Matisse as the greatest exponent of twentieth century painting, only surpassed by Picasso. That is quite debatable, although the almost pure use of color in some of his works strongly influenced many of the following avant-gardes.</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Raffaello Sanzio</td>
+      <td>Raphael</td>
+      <td>1483-1520</td>
+      <td>Equally loved and hated in different eras, no one can doubt that Raphael is one of the greatest geniuses of the Renaissance, with an excellent technique in terms of drawing and color.</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Jackson Pollock</td>
+      <td>Pollock</td>
+      <td>1912-1956</td>
+      <td>The major figure of American Abstract Expressionism, Pollock created his best works, his famous drips, between 1947 and 1950. After those fascinating years, comparable to Picasso’s Blue Period or van Gogh’s final months in Auvers, he abandoned the drip, and his latest paintings are often bold, uninspired works.</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Hilma Af Klint</td>
+      <td>AF KLINT</td>
+      <td>1862-1944</td>
+      <td>A pioneer of abstract art, Hilma af Klint was a painter who remained – by her own wish – outside any organized artistic movement, and she never exhibited her now famous works during her lifetime. Nevertheless, in recent years she has achieved unanimous recognition as one of the most original figures of modernism.</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Domenikos Theotokopoulos · El Greco</td>
+      <td>El Greco</td>
+      <td>1541-1614</td>
+      <td>One of the most original and fascinating artists of his era, with a very personal technique that was admired, three centuries later, by the impressionist painters. A true innovator in the broadest sense of the word.</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Paul Gauguin</td>
+      <td>Gauguin</td>
+      <td>1848-1903</td>
+      <td>One of the most fascinating figures in the history of painting, his works moved from Impressionism (soon abandoned) to a colorful and vigorous symbolism, as can be seen in his ‘Polynesian paintings’. Matisse and Fauvism could not be understood without the works of Paul Gauguin.</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Jean-Michel Basquiat</td>
+      <td>Basquiat</td>
+      <td>1960-1988</td>
+      <td>Basquiat is undoubtedly the most important and famous member of the “graffiti movement” that appeared in the New York scene in the early’80s, an artistic movement whose enormous influence on later painting is still to be measured.</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Edvard Munch</td>
+      <td>Munch</td>
+      <td>1863-1944</td>
+      <td>Modernist in his context, Munch could be also considered the first expressionist painter in history. Works like “The Scream” are vital for the understanding of twentieth century painting.</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Tiziano Vecellio Di Gregorio</td>
+      <td>Titian</td>
+      <td>c.1476-1576</td>
+      <td>After the premature death of Giorgione, Titian became the leading figure of Venetian painting of his time. His use of color and his taste for mythological themes defined the main features of 16th century Venetian Art. His influence on later artists -Rubens, Velázquez…- is extremely important.</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Francis Bacon</td>
+      <td>Bacon</td>
+      <td>1909-1992</td>
+      <td>Maximum exponent, along with Lucian Freud, of Postwar British Art, Bacon’s painting rebelled against all the canons of previous painting, not only in terms of beauty, but also against the abstraction of the dominant Abstract Expressionism of the time.</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Andy Warhol</td>
+      <td>Warhol</td>
+      <td>1928-1987</td>
+      <td>Brilliant and controversial, Warhol is the leading figure of pop-art and one of the icons of contemporary art. His silkscreen series depicting icons of the mass-media (as a reinterpretation of Monet’s series of Water lilies or the Rouen Cathedral) are one of the milestones of contemporary Art, with a huge influence in the Art of our days</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Sir Peter Paul Rubens</td>
+      <td>Rubens</td>
+      <td>1577-1640</td>
+      <td>Rubens was one of the most prolific painters of all time, thanks in part to the collaboration of his study. Very famous in life, he traveled around Europe to meet orders from very wealthy and important clients. His female nudes are still amazing in our days.</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Johannes Vermeer</td>
+      <td>Vermeer</td>
+      <td>1632-1675</td>
+      <td>Vermeer was the leading figure of the Delft School, and for sure one of the greatest genre painters of all time. Works such as “View of the Delft” are considered almost “impressionist” due to the liveliness of his brushwork. He was also a skilled portraitist, and his “Girl With a Pearl Earring” has been called the “Mona Lisa of the North”.</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Joan Miró</td>
+      <td>Miró</td>
+      <td>1893-1983</td>
+      <td>Like most geniuses, Miro is an unclassificable artist. His interest in the world of the unconscious, those ideas and emotions hidden in the depths of the mind, link him with Surrealism, but with a personal style, sometimes closer to Fauvism and Expressionism. His most important works are those from the series of “Constellations“, created in the early 40s.</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Tommaso Masaccio</td>
+      <td>Masaccio</td>
+      <td>1401-1428</td>
+      <td>Masaccio was one of the first old masters to use the laws of scientific perspective in his works. One of the greatest and most innovative painters of the Early Renaissance.</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Artemisia Gentileschi</td>
+      <td>Artemisia</td>
+      <td>1597-1654</td>
+      <td>One of the most gifted artists of the early baroque era, she was the first female painter to become a member of the Accademia di Arte del Disegno in Florence. During the last decades reevaluation of her work has placed Gentileschi in the place she deserves among the greatest painters of her era.</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Piero Della Francesca</td>
+      <td>Piero</td>
+      <td>1416-1492</td>
+      <td>Despite being one of the most important figures of the quattrocento, the art of Piero della Francesca has been described as “cold”, “hieratic” or even “impersonal”. But with the apparition of Berenson and the great historians of his era, like Michel Hérubel -who admired the “metaphysical dimension” of the paintings by Piero-, his precise and detailed Art finally occupied the place that it deserves in the History of Art.</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Piet Mondrian</td>
+      <td>Mondrian</td>
+      <td>1872 -1944</td>
+      <td>Along with Kandinsky and Malevich, Mondrian is the leading figure of early abstract painting. After emigrating to New York, Mondrian filled his abstract paintings with a fascinating emotional quality, as it can be seen in his series of “boogie-woogies” created in the mid-40s.</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Gustave Courbet</td>
+      <td>Courbet</td>
+      <td>1819-1877</td>
+      <td>Leading figure of realism, and a key precedent for the impressionists, Courbet was one of the greatest revolutionaries, both as an artist and as a social-activist, of the history of painting. Like Rembrandt and other predecessors, Courbet did not seek to create beauty, but believed that beauty is achieved when the artist represents the purest reality without artifice.</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Nicolas Poussin</td>
+      <td>Poussin</td>
+      <td>1594-1665</td>
+      <td>The greatest among the great French Baroque painters, Poussin had a vital influence on French painting for many centuries. His use of color is unique among all the painters of his era.</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Gustav Klimt</td>
+      <td>Klimt</td>
+      <td>1862-1918</td>
+      <td>Half way between modernism and symbolism appears the figure of Gustav Klimt, who was also devoted to the industrial arts. His nearly abstract landscapes also make him a forerunner of geometric abstraction.</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Eugène Delacroix</td>
+      <td>Delacroix</td>
+      <td>1798-1863</td>
+      <td>Eugène Delacroix is the French romanticism painter “par excellence” and one of the most important names in the European painting of the first half of the 19th century. His famous “Liberty leading the People” also demonstrates the capacity of Painting to become the symbol of an era.</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Paolo Uccello</td>
+      <td>UcCello</td>
+      <td>1397-1475</td>
+      <td>“Solitary, eccentric, melancholic and poor”. Giorgio Vasari described with these four words one of the most audacious geniuses of the early Florentine Renaissance, Paolo Uccello. Without a doubt, one of the key figures of the Quattrocento.</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>William Blake</td>
+      <td>Blake</td>
+      <td>1757-1827</td>
+      <td>Revolutionary and mystic, painter and poet, Blake is one of the most fascinating artists of any era. His watercolors, prints and temperas are filled with a wild imagination (almost crazyness), unique among the artists of his era</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Caspar David Friedrich</td>
+      <td>Friedrich</td>
+      <td>1774-1840</td>
+      <td>Leading figure of German Romantic painting, Friedrich was, as David d’Angers said, a man who had discovered ‘the tragedy of landscape’, a painter of landscapes of loneliness and distress, with human figures facing the terrible magnificence of nature.</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>Magdalena Carmen Frida Kahlo Claderón</td>
+      <td>Frida kahlo</td>
+      <td>1907-1954</td>
+      <td>In recent years, Frida’s increasing fame seems to have obscured her importance in Latin American art. Marked since childhood by the physical aftermath of a bus accident, Kahlo’s self-portraits seem like silent, yet powerful wails.</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>Kazimir Malevich</td>
+      <td>Malevich</td>
+      <td>1878-1935</td>
+      <td>Creator of Suprematism (do not mispell this word…), Malevich will forever be one of the most controversial figures of the history of art among the general public, divided between those who consider him an essential innovator and those who consider that his works based on polygons of pure colors do not deserve to be considered Art.</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Winslow Homer</td>
+      <td>Homer</td>
+      <td>1836-1910</td>
+      <td>The main figure in the American painting of his era, Homer was a breath of fresh air for the American artistic scene, which was somewhat “stuck” in the academic painting and the more romantic Hudson River School. Homer’s loose and lively brushstroke is almost impressionistic.</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Gerhard Richter</td>
+      <td>Richter</td>
+      <td>born 1932</td>
+      <td>One of the most important artists of recent decades, Richter is known either for his fierce and colorful abstractions and for his serene and photorealistic landscapes and scenes with candles.</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Marcel Duchamp</td>
+      <td>Duchamp</td>
+      <td>1887-1968</td>
+      <td>One of the major figures of Dadaism and a prototype of “total artist”, Duchamp is one of the most important and controversial figures of his era. His contribution to painting is just a small part of his huge contribution to the art world.</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Sandro Botticelli</td>
+      <td>Botticelli</td>
+      <td>1445-1510</td>
+      <td>“If Botticelli were alive today, he would be working for Vogue”, said actor Peter Ustinov. As well as Raphael, Botticelli had been equally loved or hated in different eras, but his use of color is one of the most fascinating among all old masters.</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Edward Hopper</td>
+      <td>Hopper</td>
+      <td>1882-1967</td>
+      <td>Hopper is widely known as the painter of urban loneliness. His most famous work, the fabulous “Nighthawks” (1942) has become the symbol of the solitude of the contemporary metropolis, and it is one of the icons of the 20th century Art.</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Jenny Saville</td>
+      <td>SAVILLE</td>
+      <td>b.1970</td>
+      <td>If Tracey Emin is the enfant terrible of the Young British Artists, Jenny Saville is their wunderkind, the artist whose works created in her early twenties changed forever the concept of the female nude in Western Art.</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>Mark Rothko</td>
+      <td>Rothko</td>
+      <td>1903-1970</td>
+      <td>The influence of Rothko in the history of painting is yet to be quantified, because the truth is that half a century after his death the influence of Rothko’s large, dazzling and emotional masses of color continues to be present in many painters of the 21st century.</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>Andrea Mantegna</td>
+      <td>Mantegna</td>
+      <td>1431-1506</td>
+      <td>One of the greatest exponents of the Quattrocento, interested in the human figure, which he often represented under extreme perspectives (“The Dead Christ”).</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Paul Klee</td>
+      <td>Klee</td>
+      <td>1879-1940</td>
+      <td>In a period of artistic revolutions and innovations, few artists were as crucial as Paul Klee. His studies of color, widely taught at the Bauhaus, are unique among all the artists of his time.</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>Marc Chagall</td>
+      <td>Chagall</td>
+      <td>1887-1985</td>
+      <td>Artist of dreams and fantasies, Chagall was for all his life an immigrant fascinated by the lights and colors of the places he visited. Few names from the School of Paris of the early twentieth century have contributed so much -and with such variety of ideas- to change modern Art as this man “impressed by the light,” as he defined himself.</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>Hans Holbein The Younger</td>
+      <td>Hans Holbein</td>
+      <td>1497-1543</td>
+      <td>After Dürer, Holbein is the greatest of the German painters of his time. The fascinating portrait of “The Ambassadors” is still considered one of the most enigmatic paintings from the Renaissance.</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>Edgar Degas</td>
+      <td>Degas</td>
+      <td>1834-1917</td>
+      <td>Though Degas was really not a impressionist painter, his works shared the ideals of that artistic movement. Degas paintings of young dancers or ballerinas are icons of the late 19th century painting.</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>Fra Angelico</td>
+      <td>Fra Angélico</td>
+      <td>1387-1455</td>
+      <td>One of the great colorists from the early Renaissance. Initially trained as an illuminator, he is the author of masterpieces such as “The Annunciation” in the Prado Museum.</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>Georges Seurat</td>
+      <td>Seurat</td>
+      <td>1859-1891</td>
+      <td>Georges Seurat is one of the most important post-impressionist painters, and he is considered the creator of the “pointillism”, a style of painting in which small distinct points of primary colors create the impression of a wide selection of secondary and intermediate colors.</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>Jean-Antoine Watteau</td>
+      <td>Watteau</td>
+      <td>1684-1721</td>
+      <td>Watteau is today considered one of the pioneers of the Rococo style. Unfortunately, he died at the height of his powers, as it is evidenced in the great portrait of “Gilles” painted in the year of his death.</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>Salvador Dalí</td>
+      <td>Dalí</td>
+      <td>1904-1989</td>
+      <td>“I am Surrealism!” shouted Dalí when he was expelled from the surrealist movement by André Breton. Although the quote sounds presumptuous (which was not unusual in Dalí), the fact is that Dalí’s paintings are now the most famous images of all the surrealist movement.</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>Willem De Kooning</td>
+      <td>De Kooning</td>
+      <td>1904-1997</td>
+      <td>After Pollock, the leading figure of abstract expressionism, albeit he never felt limited to the abstraction, often resorting to a heartbreaking figurative painting (his series of “Women” are the best example) with a major influence on later artists such as Francis Bacon or Lucian Freud.</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>David Hockney</td>
+      <td>Hockney</td>
+      <td>born 1937</td>
+      <td>David Hockney is one of the living myths of the Pop Art. Born in Great Britain, he moved to California, where he immediately felt identified with the light, the culture and the urban landscape of the ‘Golden State’.</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>Max Ernst</td>
+      <td>Ernst</td>
+      <td>1891-1976</td>
+      <td>Halfway between Surrealism and Dadaism appears Max Ernst, important in both movements. Ernst was a brave artistic explorer thanks in part to the support of his wife and patron, Peggy Guggenheim.</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>Tintoretto</td>
+      <td>Tintoretto</td>
+      <td>1518-1594</td>
+      <td>Tintoretto is the most flamboyant of all Venetian masters (not the best, such honour can only be reclaimed by Titian or Giorgione) and his remarkable oeuvre not only closed the Venetian splendour (until the apparition of Canaletto and his contemporaries), but also makes him the last of the Cinquecento masters.</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>Jasper Johns</td>
+      <td>Johns</td>
+      <td>born 1930</td>
+      <td>A legend of the early Pop Art, although he has never considered himself a “pop artist”. His most famous works are the series of “Flags” and “Targets”.</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>Umberto Boccioni</td>
+      <td>Boccioni</td>
+      <td>1882-1916</td>
+      <td>The maximum figure of Italian Futurism, fascinated by the world of the industry, and the movement as a symbol of contemporary times.</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>Duccio Da Buoninsegna</td>
+      <td>Duccio</td>
+      <td>c.1255/60 – 1318/19</td>
+      <td>While in Florence Giotto di Bondone was changing the history of painting, Duccio of Buoninsegna provided a breath of fresh air to the important Sienese School.</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>Roger Van Der Weyden</td>
+      <td>Van der Weyden</td>
+      <td>1399-1464</td>
+      <td>After Van Eyck, the leading exponent of Flemish painting in the fifteenth century; a master of perspective and composition.</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>John Constable</td>
+      <td>Constable</td>
+      <td>1776-1837</td>
+      <td>John Constable (1776-1837) is, along with Turner, the great figure of English romanticism. But unlike his contemporary, he never left England, and he devoted all his time to represent the life and landscapes of his beloved England.</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>Jacques-Louis David</td>
+      <td>David</td>
+      <td>1748-1825</td>
+      <td>David is the summit of neoclassicism, a grandiloquent artist whose compositions seem to reflect his own hectic and revolutionary life.</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>Arshille Gorky</td>
+      <td>Gorky</td>
+      <td>1905-1948</td>
+      <td>Armenian-born American painter, Gorky was a surrealist painter and also one of the leaders of abstract expressionism. He was called “the Ingres of the unconscious”.</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>Giorgio Barbarelli Da Castelfranco</td>
+      <td>Giorgione</td>
+      <td>1478-1510</td>
+      <td>Like so many other painters who died at young age, Giorgione (1477-1510) makes us wonder what place would his exquisite painting occupy in the history of Art if he had enjoyed a long life, just like his direct artistic heir -Titian- did.</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>Hieronymus Bosch</td>
+      <td>Bosch</td>
+      <td>1450-1516</td>
+      <td>An extremely religious man, all works by Bosch are basically moralizing, didactic. The artist saw the society of his time as the triumph of sin, the depravation, and all the things that have caused the fall of the human being from its angelical character; and he wanted to warn his contemporaries about the terrible consequences of his impure acts.</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>Pieter Bruegel The Elder</td>
+      <td>Pieter Bruegel</td>
+      <td>1528-1569</td>
+      <td>Many people find important similarities between the works by Hyeronimus Bosch and those by Brueghel, but the truth is that the differences between both of them are abysmal. Whereas Bosch’s fantasies are born of a deep deception and preoccupation for the human being, with a clearly moralizing message; works by Bruegel are full of irony, and even filled with a love for the rural life, which seems to anticipate the Dutch landscape paintings from the next century.</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>Simone Martini</td>
+      <td>Simone MARTINI</td>
+      <td>1284-1344</td>
+      <td>One of the great painters of the Trecento, he was a step further and helped to expand its progress, which culminated in the “International Style”.</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>Franz Marc</td>
+      <td>FRANZ marc</td>
+      <td>1880-1916</td>
+      <td>After Kandinsky, the great figure of the Expressionist group “The Blue Rider” and one of the most important expressionist painters ever. He died at the height of his artistic powers, when his use of color was even anticipating the later abstraction.</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>Theodore Géricault</td>
+      <td>Géricault</td>
+      <td>1791-1824</td>
+      <td>Key figure in romanticism, revolutionary in his life and works despite his bourgeois origins. In his masterpiece, “The raft of the Medusa”, Gericault creates a painting that we can define as “politically incorrect”, as it depicts the miseries of a large group of castaways abandoned after the shipwreck of a French naval frigate.</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>William Hogarth</td>
+      <td>Hogarth</td>
+      <td>1697-1764</td>
+      <td>A list of the great portrait painters of all time should never miss the name of William Hogarth, whose studies and sketches could even qualify as “pre-impressionist”.</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>Jean-Baptiste Camille Corot</td>
+      <td>CAMILLE Corot</td>
+      <td>1796-1875</td>
+      <td>One of the great figures of French realism in the 19th century and certainly one of the major influences for the impressionist painters like Monet or Renoir, thanks to his love for “plen-air” painting, emphasizing the use of light.</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>Georges Braque</td>
+      <td>Braque</td>
+      <td>1882-1963</td>
+      <td>Along with Picasso and Juan Gris, the main figure of Cubism, the most important of the avant-gardes of the 20th century Art.</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>Berthe Marie Pauline Morisot</td>
+      <td>Morisot</td>
+      <td>1841-1895</td>
+      <td>One of the most talented painters from the age of the impressionism, considered one of “les trois grandes dames” of the Impressionism along with Mary Cassatt and Marie Bracquemond.</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>James Abbot Mcneill Whistler</td>
+      <td>Whistler</td>
+      <td>1834-1903</td>
+      <td>Along with Winslow Homer, the great figure of the American painting of his time. Whistler was an excellent portraitist, which is shown in the fabulous portrait of his mother, considered one of the great masterpieces of the American painting of all time.</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>Frederic Edwin Church</td>
+      <td>Church</td>
+      <td>1826-1900</td>
+      <td>Church represents the culmination of the Hudson River School: he had Thomas Cole’s love for the landscape, Asher Brown Durand’s romantic lyricism, and Albert Bierstadt’s grandiloquence, but he was braver and technically more gifted than anyone of them. Church is without any doubt one of the greatest landscape painters of all time, perhaps only surpassed by Turner and some impressionists and postimpressionists like Monet or Cézanne.</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>Georges De La Tour</td>
+      <td>De la Tour</td>
+      <td>1593-1652</td>
+      <td>The influence of Caravaggio is evident in De la Tour, whose use of light and shadows is unique among the painters of the Baroque era.</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>Jean.François Millet</td>
+      <td>Millet</td>
+      <td>1814-1875</td>
+      <td>One of the main figures of the Barbizon School, creator of one of the most emotive paintings of the 19th century: The “Angelus”.</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>Amedeo Modigliani</td>
+      <td>Modigliani</td>
+      <td>1884-1920</td>
+      <td>One of the most original portraitists of the history of painting, considered as a “cursed” painter because of his wild life and early death.</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>Élisabeth-Louise Vigée Le Brun</td>
+      <td>Vigeé Le Brun</td>
+      <td>1755-1842</td>
+      <td>Placed between the late Rococo and the early Neoclassical, Élisabeth Vigée Le Brun was one of the most sought-after portraitists of her era.</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>René Magritte</td>
+      <td>Magritte</td>
+      <td>1898-1967</td>
+      <td>One of the leading figures of surrealism, his apparently simple works are the result of a complex reflection about reality and the world of dreams</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>Cimabue</td>
+      <td>Cimabue</td>
+      <td>c.1240-1302</td>
+      <td>Although in some of his works Cimabue already represented a visible evolution of the rigid Byzantine art, his greatest contribution to painting was to discover a young talented artist named Giotto (see number 2), who changed forever the Western painting.</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>Pierre-Auguste Renoir</td>
+      <td>Renoir</td>
+      <td>1841-1919</td>
+      <td>One of the key figures of Impressionism, he soon left the movement to pursue a more personal, academic painting.</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>Egon Schiele</td>
+      <td>Schiele</td>
+      <td>1890-1918</td>
+      <td>Another “died too young” artist, his strong and ruthless portraits influenced the works of later artists, like Lucian freud or Francis Bacon.</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>Dante Gabriel Rossetti</td>
+      <td>Rossetti</td>
+      <td>1828-1882</td>
+      <td>Perhaps the key figure in the pre-Raphaelite movement, Rossetti left the poetry to focus on classic painting with a style that influenced the symbolism.</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>Frans Hals</td>
+      <td>Hals</td>
+      <td>c.1580-1666</td>
+      <td>One of the most important portraitists ever, his lively brushwork influenced early impressionism.</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>Claude Lorrain</td>
+      <td>Lorrain</td>
+      <td>1600-1682</td>
+      <td>His works were a vital influence on many landscape painters for many centuries, both in Europe (Corot, Courbet) and in America (Hudson River School).</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>Roy Lichtenstein</td>
+      <td>Lichtenstein</td>
+      <td>1923-1977</td>
+      <td>Along with Andy Warhol, the most famous figure of the American Pop-Art. His works are often related to the style of the comics, though Lichtenstein rejected that idea.</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>Georgia O’Keefe</td>
+      <td>O’KeeFfe</td>
+      <td>1887-1986</td>
+      <td>A leading figure in the 20th century American Art, O’Keefe single-handedly redefined the Western American painting.</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>Banksy</td>
+      <td>Banksy</td>
+      <td>born 1974?</td>
+      <td>The most recent and most mysterious name in this list is Banksy, pseudonymous of the most famous street artist of our era.</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>William-Adolphe Bouguereau</td>
+      <td>Bouguereau</td>
+      <td>1825-1905</td>
+      <td>Another case of “love him or hate him” artist. Admired and extremely sought-after during his time, after the rise of the avant-garde his style fell into oblivion, altough he has been somewhat “rediscovered” in recent years.</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Gustave Moreau</td>
+      <td>Moreau</td>
+      <td>1826-1898</td>
+      <td>One of the key figures of symbolism, introverted and mysterious in life, but very free and colorful in his works.</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>Giorgio De Chirico</td>
+      <td>De Chirico</td>
+      <td>1888-1978</td>
+      <td>Considered the father of metaphysical painting and a major influence on the Surrealist movement.</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>Fernand Léger</td>
+      <td>Léger</td>
+      <td>1881-1955</td>
+      <td>A pure cubist painter during his early decades, Leger was increasingly attracted to the world of machinery and movement, creating works such as “The Discs” (1918).</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>Jean-Auguste-Dominique Ingres</td>
+      <td>IngrEs</td>
+      <td>1780-1867</td>
+      <td>Ingres was the most prominent disciple of the most famous neoclassicist painter, Jacques Louis David, and a master of classic portrait.</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>Diego Rivera</td>
+      <td>Rivera</td>
+      <td>1886-1957</td>
+      <td>Diego Rivera, a memorable figure in 20th-century art, actively painted during the 50 years from 1907 to 1957. Mexican by birth, Rivera spent a good portion of his adult life in Europe and the United States as well as in his home in Mexico City. Early in his career, he dabbled in Cubism and later embraced Post-Impressionism, but his unique style and perspective are immediately recognizable as his own.</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>Grant Wood</td>
+      <td>Wood</td>
+      <td>1891-1942</td>
+      <td>Grant Wood is known for his stylized and subtly humorous scenes of rural people, Iowa cornfields, and mythic subjects from American history</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>Mary Cassett</td>
+      <td>Cassett</td>
+      <td>1844-1936</td>
+      <td>A celebrated member of the French Impressionists, Pennsylvania-born Mary Cassatt challenged the conventional expectations of Philadelphia’s elite.</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>Tamara de Lepicka</td>
+      <td>Lepicka</td>
+      <td>1898-1890</td>
+      <td>Tamara de Lempicka, was a Polish painter who spent her working life in France and the United States. She is best known for her polished Art Deco portraits of aristocrats and the wealthy, and for her highly stylized paintings of nudes.</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+
+</html>
