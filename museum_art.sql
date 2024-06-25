@@ -73,6 +73,11 @@ select * from carnegie
 SELECT  p.title, p.artist, p.cited_name, t."nameP" , p.artwork_genre, t.colloq_name, t.bio
 FROM carnegie p
 JOIN top_artists t
+ON (p.artist = t.last_name)
+
+SELECT  p.artist, p.title, p.museum, p.artwork_genre, p.creation_date, t.colloq_name
+FROM carnegie p
+JOIN top_artists t
 ON (p.last_name = t.last_name)
 
 CREATE VIEW carnegie_filtered AS
@@ -81,9 +86,43 @@ FROM carnegie p
 JOIN top_artists t
 ON (p.last_name = t.last_name)
 
+
 select * from carnegie_filtered
 
 select * from chicago
 
 select * from cleveland
 
+SELECT COUNT(title)
+FROM chicago;
+
+-- combine Cleveland and Chicago, and create a View
+CREATE VIEW cle_chi AS
+SELECT *
+FROM cleveland
+
+UNION ALL
+
+SELECT *
+FROM chicago;
+
+SELECT * from cle_chi
+SELECT COUNT(title)
+FROM chicago;
+
+-- combine Carnegie with Cleveland + Chicago, and create a View
+CREATE VIEW cle_chi_carn AS
+SELECT *
+FROM cle_chi
+
+UNION ALL
+
+SELECT artist, title, museum, artwork_genre, creation_date
+FROM carnegie_filtered;
+
+SELECT COUNT(title)
+FROM cle_chi_carn;
+-- output matches pandas df
+
+SELECT * from cle_chi_carn
+ORDER BY artist, title ASC
