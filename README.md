@@ -20,6 +20,7 @@ Cleveland Museum of Art:
 
 
 **Sources for Data**
+
 Art institute of Chicago Data Dump:   https://github.com/art-institute-of-chicago/api-data;
 
 101.csv:  https://theartwolf.com/most-important-painters/, 
