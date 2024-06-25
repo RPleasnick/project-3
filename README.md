@@ -1,2 +1,4 @@
 # project-3
-Collaboration with Matt, Saritha, and Renee 
+Collaboration with Matthew Rindfleisch, Saritha Vulupala, and Renee Pleasnick
+
+
