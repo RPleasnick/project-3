@@ -19,6 +19,14 @@ Cleveland Museum of Art:
 **How to Use**
 
 
+**Ethical Considerations**
+
+When looking at each of the museums websites, not only did each museum store information differently, each museum had criteria when using their information.  The Art Institute of Chicago discouraged scraping their website and only allowed only the data from there public art to be used.  Utilizing the data dump, only gave the information that was public.
+
+When creating list of "Greatest Painters", several lists were combine to try to lessen biases.  The s used votes to determine who was the "greatest".
+
+
+
 **Sources for Data**
 
 Art institute of Chicago Data Dump:   https://github.com/art-institute-of-chicago/api-data;
