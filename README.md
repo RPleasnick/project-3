@@ -28,6 +28,7 @@ Art institute of Chicago Data Dump:   https://github.com/art-institute-of-chicag
           https://mymodernmet.com/greatest-painters-of-all-time/
 
 **Reference for Code**
+
 Function to extract creation date from json file came from XPert AI
 
 
