@@ -1,5 +1,5 @@
-xt# project-3
-Collaboration with Matthew Rindfleisch, Saritha Vulupala, and Renee Pleasnick
+# project-3
+Collaborative effort of Matthew Rindfleisch, Saritha Vulupala, and Renee Pleasnick
 
 
 **OVERVIEW**
