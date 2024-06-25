@@ -22,26 +22,68 @@ CREATE TABLE "cmoa" (
     "index" DECIMAL   NOT NULL
 );
 
+CREATE TABLE "carnegie" (
+    "last_name" VARCHAR(50)   NOT NULL,
+    "cited_name" VARCHAR(100)   NOT NULL,
+    "artwork_genre" VARCHAR(50)   NOT NULL,
+    "title" VARCHAR(450)   NOT NULL,
+    "artist" VARCHAR(100)   NOT NULL,
+    "creation_date" VARCHAR(50)   NOT NULL,
+    "nationality" VARCHAR(50)   NOT NULL,
+    "index" DECIMAL   NOT NULL,
+    "museum" VARCHAR(100)   NOT NULL
+);
+
+CREATE TABLE "cleveland" (
+    "artist" VARCHAR(100)   NOT NULL,
+    "title" VARCHAR(255)   NOT NULL,
+    "museum" VARCHAR(100)   NOT NULL,
+    "artwork_genre" VARCHAR(50)   NOT NULL,
+    "creation_date" VARCHAR(100)   NOT NULL
+);
+
+CREATE TABLE "chicago" (
+    "artist" VARCHAR(100)   NOT NULL,
+    "title" VARCHAR(255)   NOT NULL,
+    "museum" VARCHAR(100)   NOT NULL,
+    "artwork_genre" VARCHAR(50)   NOT NULL,
+    "creation_date" VARCHAR(100)   NOT NULL
+);
+
 ALTER TABLE "cmoa" ADD CONSTRAINT "fk_cmoa_last_name" FOREIGN KEY("last_name")
 REFERENCES "top_artists" ("last_name");
+
+-- drop tables because source csv was updated, then rerun CREATE TABLE code -- 
+-- have to drop VIEW first -- 
+DROP VIEW carnegie_filtered; 
+DROP TABLE top_artists
+DROP TABLE cmoa
+DROP TABLE carnegie
+DROP TABLE chicago
+drop TABLE cleveland
 
 -- check here for sucessful creation and import from csv files --
 -- START RUN HERE:
 
 select * from top_artists
 
-select * from cmoa
+select * from carnegie
 
 -- run query to ensure joins work -- 
-SELECT  p.title, p.last_name, p.full_name, p.classification, t.colloq_name, t.bio
-FROM cmoa p
+SELECT  p.title, p.artist, p.cited_name, t."nameP" , p.artwork_genre, t.colloq_name, t.bio
+FROM carnegie p
 JOIN top_artists t
 ON (p.last_name = t.last_name)
 
-CREATE VIEW cmoa_filtered AS
-SELECT  p.title, p.last_name, p.full_name, t.colloq_name, t."lifespanP"
-FROM cmoa p
+CREATE VIEW carnegie_filtered AS
+SELECT  p.artist, p.title, p.museum, p.artwork_genre, p.creation_date, t.colloq_name
+FROM carnegie p
 JOIN top_artists t
 ON (p.last_name = t.last_name)
 
-select * from cmoa_filtered
+select * from carnegie_filtered
+
+select * from chicago
+
+select * from cleveland
+
