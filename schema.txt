@@ -15,29 +15,27 @@ carnegie
 last_name        VARCHAR(50)   
 cited_name       VARCHAR(100)
 artwork_genre    VARCHAR(50)
-title            VARCHAR(255)
-artist           VARCHAR(100) FK >- top_artists.last_name
-creation_date    VARCHAR(30)
+title            VARCHAR(450)
+artist           VARCHAR(100) FK >- top_artists.nameP
+creation_date    VARCHAR(50)
 nationality      VARCHAR(50)
 index            DECIMAL
 museum           VARCHAR(100)
 
 cleveland
 -
-artist           VARCHAR(100)   FK >- top_artists.last_name
-colloq_name      VARCHAR(100)
-title            VARCHAR(255)
-creation_date    VARCHAR(30)
-department       VARCHAR(100)
-artwork_genre    VARCHAR(50) 
-museum           VARCHAR(100)
-
-chicago
--
-artist           VARCHAR(100) FK >- top_artists.last_name 
+artist           VARCHAR(100) 
 title            VARCHAR(255)
 museum           VARCHAR(100)
 artwork_genre    VARCHAR(50)
-creation_date    VARCHAR(30)
+creation_date    VARCHAR(100)
+
+chicago
+-
+artist           VARCHAR(100) 
+title            VARCHAR(255)
+museum           VARCHAR(100)
+artwork_genre    VARCHAR(50)
+creation_date    VARCHAR(100)
 
 

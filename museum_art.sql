@@ -61,6 +61,7 @@ DROP TABLE cmoa
 DROP TABLE carnegie
 DROP TABLE chicago
 drop TABLE cleveland
+drop VIEW cle_chi_carn
 
 -- check here for sucessful creation and import from csv files --
 -- START RUN HERE:
@@ -70,11 +71,12 @@ select * from top_artists
 select * from carnegie
 
 -- run query to ensure joins work -- 
-SELECT  p.title, p.artist, p.cited_name, t."nameP" , p.artwork_genre, t.colloq_name, t.bio
+SELECT  p.title, p.artist, t."nameP" , p.last_name, p.cited_name,  p.artwork_genre, t.colloq_name, t.bio
 FROM carnegie p
 JOIN top_artists t
-ON (p.artist = t.last_name)
+ON (lower(p.artist) = lower(t."nameP"))
 
+-- cannot join on last name as there are multiple artists with same last name (e.g., Turner)
 SELECT  p.artist, p.title, p.museum, p.artwork_genre, p.creation_date, t.colloq_name
 FROM carnegie p
 JOIN top_artists t
@@ -84,8 +86,7 @@ CREATE VIEW carnegie_filtered AS
 SELECT  p.artist, p.title, p.museum, p.artwork_genre, p.creation_date, t.colloq_name
 FROM carnegie p
 JOIN top_artists t
-ON (p.last_name = t.last_name)
-
+ON (lower(p.artist) = lower(t."nameP"))
 
 select * from carnegie_filtered
 
@@ -126,3 +127,5 @@ FROM cle_chi_carn;
 
 SELECT * from cle_chi_carn
 ORDER BY artist, title ASC
+
+
