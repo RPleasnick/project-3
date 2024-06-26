@@ -6,8 +6,8 @@ Collaborative effort of Matthew Rindfleisch, Saritha Vulupala, and Renee Pleasni
 
 In this project, data from several museums were gathered.  The specific museums where the Carnegie Museum of Art, the Art Institute of Chicago, and the Cleveland Museum of Art.  The project was to see where to find art pieces from the greatest painters.  Since the "greatest painters" are subjective, _101.csv_ file was created by combining lists from 3 different websites.  The _101.csv_ was used to filter each museums data, and each museum had different challenges.
 
-Carnagie Museum of Art:
-
+Carnegie Museum of Art:
+The collection data of the Carnegie Museum of Art in Pittsburgh, Pennsylvania was located in a public archive on GitHub. The data is available in both csv and json format. The repository has been archived by the owner on Mar 12, 2021 and is now read-only. The repo has an helpful readme.md file that outlined the metadata and data structure format and scheme. We downloaded the csv file for the assignment. 
 
 Art Institute of Chicago:
 
@@ -25,13 +25,14 @@ Cleveland Museum of Art:
 
 When looking at each of the museums websites, not only did each museum store information differently, each museum had criteria when using their information.  The Art Institute of Chicago discouraged scraping their website and only allowed only the data from there public art to be used.  Utilizing the data dump, only gave the information that was public.
 
-When creating list of "Greatest Painters", several lists were combine to try to lessen biases.  The s used votes to determine who was the "greatest".
-
+When creating list of "Greatest Painters", several lists were combine to try to lessen biases.  The s used votes to determine who was the "greatest". The license agreement for theartwolf.com stated that, 
+'You may access this from theArtWolf for your own personal use subjected to restrictions set in (the) terms and conditions.'
 
 
 **Sources for Data**
 
 Art institute of Chicago Data Dump:   https://github.com/art-institute-of-chicago/api-data;
+Carnegie Museum of Art in Pittsburgh, Pennsylvania: https://github.com/cmoa/collection
 
 101.csv:  https://theartwolf.com/most-important-painters/, 
           https://www.ranker.com/list/best-painters-of-all-time/ranker-art,  
@@ -40,5 +41,7 @@ Art institute of Chicago Data Dump:   https://github.com/art-institute-of-chicag
 **Reference for Code**
 
 Function to extract creation date from json file came from XPert AI
+Render CSV webpage code: https://github.com/maksimKorzh/flask-tutorials/tree/master/csv
+Parsing a CSV file with Javascript: https://www.youtube.com/watch?v=oencyPPBTUQ
 
 
