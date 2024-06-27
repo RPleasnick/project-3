@@ -15,7 +15,9 @@ Discouraged scraping of website due to the amount of data.  Provided a data dump
 ![Screenshot 2024-06-25 160306](https://github.com/RPleasnick/project-3/assets/146039635/bb1cb7b0-8051-48a8-9aaa-ba4e0f71f283)
 
 Cleveland Museum of Art:
+Cleveland Museum of Art: The collection of the data for Cleveland Museum of Art was in their public GitHub in json and CSV formats. The data is imported in to the Mongo DB and filtered all the records with no artist names. Then created the dataframe from the collection and extracted the artist name and created a new field and then merged with the 101 artists data frame to create the final dataframe and converted to CSV and loaded to the database.
 
+Panel: Used Panel the python library to create the interactive dashboard to display the final data from all the museums. the code is in panel.ipnyb. Needed more time to deploy to the web.
 
 **How to Use**
 The output of this assignment is a dataset of filtered datasets from all 3 museums in the form of both `csv` files and a sql `VIEW` (called `cle_chi_carn`).  The user may grab a `csv` file and view a pretty rendering of the data using either 'Render CSV' or 'CSV Parser' - instructions on how to run these are in the "References" section.
@@ -37,11 +39,13 @@ Carnegie Museum of Art in Pittsburgh, Pennsylvania: https://github.com/cmoa/coll
 101.csv:  https://theartwolf.com/most-important-painters/, 
           https://www.ranker.com/list/best-painters-of-all-time/ranker-art,  
           https://mymodernmet.com/greatest-painters-of-all-time/
+Cleveland Art Museum: https://github.com/ClevelandMuseumArt/openaccess/blob/master/data.csv
 
 **Reference for Code**
 
 - Function to extract creation date from json file came from XPert AI
 - Render CSV: to run this program, run `app.py`; companion file need is `templates\home.html`. Source code is from: https://github.com/maksimKorzh/flask-tutorials/tree/master/csv
 - Parsing a CSV file with Javascript: run `csv-conversion\index.html`; companion files are all in `csv-conversion`folder. Source code is from: https://www.youtube.com/watch?v=oencyPPBTUQ
+- Panel: https://panel.holoviz.org/tutorials/basic/build_dashboard.html
 
 
