@@ -10,7 +10,6 @@ Carnegie Museum of Art:
 The collection data of the Carnegie Museum of Art in Pittsburgh, Pennsylvania was located in a public archive on GitHub. The data is available in both csv and json format. The repository has been archived by the owner on Mar 12, 2021 and is now read-only. The repo has an helpful readme.md file that outlined the metadata and data structure format and scheme. We downloaded the csv file for the assignment. 
 
 Art Institute of Chicago:
-
 Discouraged scraping of website due to the amount of data.  Provided a data dump through their GitHub.  This provided allArtwork.json file and several json files for each piece of art.  The allArtwork.json file had a list of artists and their art pieces and the unique id for each artwork.  The other json files can be found in project-3\api-data\json\artworks".  The files are zipped because there are over 200,000 json files.  The aic.ipynb filters the allArtwork with the list of painters from 101.csv. dataframes are created with each file and merged.  The code then uses a function to extract the creation date for each art piece and merges it to the dataframe.  The dataframe is then written to a CSV file and loaded in database.
 
 ![Screenshot 2024-06-25 160306](https://github.com/RPleasnick/project-3/assets/146039635/bb1cb7b0-8051-48a8-9aaa-ba4e0f71f283)
@@ -32,6 +31,7 @@ When creating list of "Greatest Painters", several lists were combine to try to 
 **Sources for Data**
 
 Art institute of Chicago Data Dump:   https://github.com/art-institute-of-chicago/api-data;
+
 Carnegie Museum of Art in Pittsburgh, Pennsylvania: https://github.com/cmoa/collection
 
 101.csv:  https://theartwolf.com/most-important-painters/, 
