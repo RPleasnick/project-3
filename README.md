@@ -19,7 +19,7 @@ Cleveland Museum of Art:
 
 
 **How to Use**
-
+The output of this assignment is a dataset of filtered datasets from all 3 museums in the form of both `csv` files and a sql `VIEW` (called `cle_chi_carn`).
 
 **Ethical Considerations**
 
@@ -40,8 +40,8 @@ Carnegie Museum of Art in Pittsburgh, Pennsylvania: https://github.com/cmoa/coll
 
 **Reference for Code**
 
-Function to extract creation date from json file came from XPert AI
-Render CSV webpage code: https://github.com/maksimKorzh/flask-tutorials/tree/master/csv
-Parsing a CSV file with Javascript: https://www.youtube.com/watch?v=oencyPPBTUQ
+- Function to extract creation date from json file came from XPert AI
+- Render CSV: to run this program, run `app.py`; companion file need is `templates\home.html`. Source code is from: https://github.com/maksimKorzh/flask-tutorials/tree/master/csv
+- Parsing a CSV file with Javascript: run `csv-conversion\index.html`; companion files are all in `csv-conversion`folder. Source code is from: https://www.youtube.com/watch?v=oencyPPBTUQ
 
 
