@@ -19,7 +19,7 @@ Cleveland Museum of Art:
 
 
 **How to Use**
-The output of this assignment is a dataset of filtered datasets from all 3 museums in the form of both `csv` files and a sql `VIEW` (called `cle_chi_carn`).
+The output of this assignment is a dataset of filtered datasets from all 3 museums in the form of both `csv` files and a sql `VIEW` (called `cle_chi_carn`).  The user may grab a `csv` file and view a pretty rendering of the data using either 'Render CSV' or 'CSV Parser' - instructions on how to run these are in the "References" section.
 
 **Ethical Considerations**
 
